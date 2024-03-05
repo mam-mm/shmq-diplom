@@ -157,9 +157,18 @@ body {
     border-radius: 2px;
 }
 
-/* .menu__list-item.active {
-    width: 187px;
-} */
+.menu__list-item.active {
+    min-width: 187px;
+    background: #FFFFFF;
+    min-height: 52px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    box-shadow: 0px 0px 2px 0px #0000001F;
+    box-shadow: 0px 2px 2px 0px #0000003D;
+}
+
 .red {
     color: red;
 }
@@ -246,17 +255,20 @@ body {
 .movie-hall {
     background: #F1EBE6F2;
     border-radius: 2px;
+    margin-top: -5px;
+    margin-left: -2px;
+    padding-bottom: 10px;
 }
 
 .buying-info {
-padding: 15px;
+    padding: 15px;
 }
 
 .buying-info-hall {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .buying-scheme {
@@ -283,6 +295,12 @@ padding: 15px;
     align-items: end;
 }
 
+.buying-scheme_column {
+    display: grid;
+    gap: 4px;
+}
+
+
 .white_chair {
     background-color: #fff;
 }
@@ -304,13 +322,12 @@ padding: 15px;
 }
 
 .buying-scheme__legend {
-    box-sizing: border-box;
     width: 284px;
     margin: 0 auto;
-    padding: 30px 15px 20px 15px;
+    padding: 30px 0px 20px 0px;
     display: grid;
     grid-template-columns: 20px 150px 20px 60px;
-    gap: 5px;
+    gap: 7px;
 }
 
 .buying-scheme__legend-price {
@@ -339,7 +356,7 @@ padding: 15px;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    margin: 20px auto;
+    margin: 27px auto;
     display: block;
 }
 
@@ -350,63 +367,64 @@ padding: 15px;
 }
 
 .ticket__wrapper {
-    
+
     border-radius: 2px;
 
 }
 
-.ticket__header { 
+.ticket__header {
     background: #F1EBE6F2;
-font-size: 22px;
-font-weight: 700;
-line-height: 25px;
-letter-spacing: 0em;
-text-align: left;
-text-transform: uppercase;
-color:#C76F00;
-padding: 25px 15px 25px 15px;
-position: relative;
-margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #C76F00;
+    padding: 25px 15px 25px 15px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .ticket__header::before {
-content: "";
-  display: block;
-  position: absolute;
-  display: block;
-  background-image: url("../img/border-top.png");
-  background-repeat: repeat;
-  width:100%;
-  height: 5px;
-  top: -5px;
-  left:0;
+    content: "";
+    display: block;
+    position: absolute;
+    display: block;
+    background-image: url("../img/border-top.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    left: 0;
 }
 
 .ticket__header::after {
     content: "";
-      display: block;
-      position: absolute;
-      display: block;
-      background-image: url("../img/border-bottom.png");
-      background-repeat: repeat;
-      width:100%;
-      height: 5px;
-      bottom:-5px;
-      left:0;
-    }
+    display: block;
+    position: absolute;
+    display: block;
+    background-image: url("../img/border-bottom.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 5px;
+    bottom: -5px;
+    left: 0;
+}
 
 .ticket__section {
     background: #F1EBE6F2;
-    padding-top:15px;
+    padding-top: 15px;
     padding-left: 13px;
     padding-right: 15px;
     font-family: Roboto;
-font-size: 16px;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: left;
-position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .ticket__section::before {
@@ -416,10 +434,10 @@ position: relative;
     display: block;
     background-image: url("../img/border-top.png");
     background-repeat: repeat;
-    width:100%;
+    width: 100%;
     height: 5px;
     top: -5px;
-    left:0;
+    left: 0;
 }
 
 .ticket__section::after {
@@ -429,15 +447,15 @@ position: relative;
     display: block;
     background-image: url("../img/border-bottom.png");
     background-repeat: repeat;
-    width:100%;
+    width: 100%;
     height: 5px;
-    bottom:-5px;
-    left:0;
+    bottom: -5px;
+    left: 0;
 }
 
 .ticket__info {
     display: block;
- padding-bottom: 10px;
+    padding-bottom: 10px;
 
 }
 
@@ -462,43 +480,172 @@ position: relative;
 }
 
 .ticket__hint {
-font-size: 14px;
-font-weight: 300;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: left;
-padding-top:7px;
-padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 7px;
+    padding-bottom: 10px;
 }
 
 .ticket-code {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+/* login-page */
+.page-login {
+    background-image: url("../img/login_bg.png") !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: relative;
+}
+
+.page-login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+    background-color: #000000;
+}
+
+.header_adm {
+    width: 100%;
+    width: 990px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 40px;
+    padding-left: 112px;
+    padding-top: 27px;
+}
+
+.heading-1 {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.authorization_form {
+    width: 480px;
+    background: #EAE9EBF2;
+    margin: 0 auto;
+    padding-bottom: 29px;
+}
+
+.authorization_header {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #63536C;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.authorization_inform {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    margin: 0 auto;
+    padding-top: 34px;
+    box-sizing: border-box;
+}
+
+.lable {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #848484;
+}
+
+.password-input,
+.E-mail-input {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: 1px solid #B7B7B7;
+    padding: 9px;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+}
+
+
+.authorization_button {
+    width: 189px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 13px auto;
+    display: block;
+}
+
+
 @media (min-width: 991px) {
-  .tap {
-    display: none;
-  }  
-  .tap_hand {
-    display: none;
-  }  
+    .tap {
+        display: none;
+    }
+
+    .tap_hand {
+        display: none;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 990px) {
 
     .home {
         width: 100vw;
-    } 
+    }
 
     .header {
         width: 100vw;
         width: 100%;
     }
 
+    .header_adm {
+        width: 100vw;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .page-login {
+        width: 100vw;
+        width: 100%; 
+    }
     .menu {
         width: 100vw;
         width: 100%;
@@ -524,14 +671,16 @@ padding-bottom: 10px;
 
 .tap_block {
     display: block;
-    padding-right: 15px;
+    padding-right: 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .tap_hand {
     width: 24px;
     height: 32px;
+    padding-top: 20px;
 }
 
 .tap {
@@ -551,12 +700,17 @@ padding-bottom: 10px;
     }
 
     .header {
-        width: 100vw; 
+        width: 100vw;
         width: 100%;
     }
 
+    .header_adm {
+        width: 100vw;
+        width: 100%;
+        padding-left: 20px;
+    }
     .menu {
-        width: 100vw; 
+        width: 100vw;
         width: 100%;
     }
 

@@ -1,1 +1,35 @@
-Приветики
+<!DOCTYPE html>
+<html class="page-login" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="home">
+        <header class="header_adm">
+            <div onclick="document.location='index.html'" style="cursor: pointer;"  class="heading">
+                <div>идём</div>
+                <div class="thin">в</div>
+                <div>кино</div>
+            
+            </div>
+            <div class="heading-1">Администраторррская</div>
+        </header>
+        <main class="authorization">
+            <div class="authorization_form">
+                <div class="authorization_header"> авторизация</div>
+                <form class="authorization_inform">
+                    <label for="E-mail" class="lable"> E-mail</label>
+                    <input id="E-mail" class="E-mail-input" placeholder="example@domain.xyz" type="email">
+                    <label for="password" class="lable"> Пароль</label>
+                    <input id="password" class="password-input" type="password" >
+                </form>
+                <button onclick="document.location='admin.html'" class="authorization_button" type="button">авторизоваться</button>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
