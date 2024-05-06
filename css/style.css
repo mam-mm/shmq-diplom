@@ -52,6 +52,11 @@ a {
     color: black;
 }
 
+h3 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
 ul {
     padding: 0;
     margin: 0;
@@ -522,13 +527,14 @@ body {
 .header_adm {
     width: 100%;
     width: 990px;
+    box-sizing: border-box;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 34px;
     padding-left: 112px;
-    padding-top: 27px;
+    padding-top: 31px;
 }
 
 .heading-1 {
@@ -614,6 +620,612 @@ body {
     display: block;
 }
 
+/* admin page */
+
+.adm_wrapper {
+    width: 962px;
+    margin: 0 auto;
+    background: #EAE9EBF2;
+}
+
+.adm_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 170px;
+    margin-left: 60px;
+    width: 2px;
+    height: 2490px;
+    background: #BC95D6;
+    z-index: 0;
+}
+
+.adm_wrapper__header {
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: #ffff;
+    height: 95px;
+    text-align: left;
+    padding-top: 36px;
+    padding-left: 103px;
+    display: block;
+    text-transform: uppercase;
+    background: #63536C;
+    position: relative;
+}
+
+.adm_wrapper__header::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 4px solid #BC95D6;
+    background: #FFFFFF;
+    top: 25px;
+    left: 40px;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+
+.adm_wrapper__header::after {
+    content: " ";
+    background-image: url("../img/arrow.png");
+    background-size: cover;
+    position: absolute;
+    width: 24px;
+    height: 16px;
+    top: 38px;
+    right: 42px;
+}
+
+.adm_wrapper__halls__info {
+    background: #EAE9EBF2;
+    padding-top: 35px;
+    padding-left: 104px;
+    padding-bottom: 35px;
+}
+
+.adm__info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.adm_wrapper__halls__available {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 17px;
+    padding-top: 2px;
+    padding-left: 12px;
+}
+
+.adm_wrapper__halls {
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.adm_wrapper__halls::after {
+    content: url("../img/Button.svg");
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px 0px 0px 0px;
+    top: -5px;
+}
+
+.create__hall {
+    width: 159px;
+    height: 40px;
+    background: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.adm__halls-configuration {
+    background: #EAE9EBF2;
+    padding-top: 35px;
+    padding-left: 104px;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adm__halls-configuration__config {
+    padding-bottom: 37px;
+}
+
+.conf__halls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.conf__hall__selected {
+    width: 90px;
+    height: 46px;
+    background: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 0px 0px 2px 0px #0000001F;
+    box-shadow: 0px 2px 2px 0px #0000003D;
+    box-shadow: 0px 6px 8px 0px #0000003D;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 16px;
+}
+
+.conf__hall {
+    width: 81px;
+    height: 42px;
+    background: #FFFFFF73;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 13px;
+
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.conf__plases {
+    display: grid;
+    grid-template-columns: 100px 40px 100px;
+}
+
+.conf__legend {
+    color: #848484;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+}
+
+.conf__type__legend {
+    align-self: center;
+    padding-left: 2px;
+}
+
+.conf__place__x {
+    font-size: 18px;
+    font-weight: 400;
+    color: #848484;
+    align-self: center;
+    justify-self: center;
+}
+
+.conf__place {
+    width: 100px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    color: #757575;
+    padding-top: 7px;
+    padding-left: 7px;
+    box-sizing: border-box;
+}
+
+.adm__halls-configuration__places {
+    padding-bottom: 36px;
+}
+
+
+.conf__types {
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 26px 150px 26px 114px 26px 223px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #848484;
+    padding-bottom: 12px;
+}
+
+.conf__type__regular {
+    width: 26px;
+    height: 26px;
+    background: #C4C4C4;
+    border: 1px solid #393939;
+    border-radius: 4px;
+}
+
+.conf__type__vip {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background: #B0D6D8;
+    border: 1px solid #0A828A;
+    background-image: url("../img/8cff6ffff6df6934c95175ab4f9f3fd0.png");
+}
+
+.conf__type__blocked {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid #C4C4C4;
+}
+
+.conf__types__hint {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #848484;
+}
+
+.conf__step__hall {
+    width: 826px;
+    border: 1px solid #000000;
+    margin-top: 6px;
+    padding-bottom: 33px;
+}
+
+.conf__step__screen {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 19px;
+    text-align: center;
+    color: #000000;
+    display: block;
+    padding-top: 27px;
+    padding-left: 38px;
+    padding-bottom: 20px;
+}
+
+.conf__step__hall-wrp {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    gap: 6px;
+    align-items: end;
+    width: 278px;
+    margin: 0 auto;
+}
+
+.conf__step__hall_column {
+    display: grid;
+    gap: 10px;
+}
+
+.conf__step__hall_chair {
+    box-sizing: border-box;
+    height: 26px;
+    width: 26px;
+    border-radius: 4px
+}
+
+.fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 25px;
+    width: 816px;
+}
+
+.cancel_button {
+    width: 121px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #63536C;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.save__button {
+    width: 146px;
+    height: 40px;
+    background: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.adm__prices {
+    background: #EAE9EBF2;
+    padding-top: 35px;
+    padding-left: 103px;
+    padding-bottom: 39px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 33px;
+}
+
+.adm__prices__halls {
+    padding-bottom: 33px;
+}
+
+
+.conf__options {
+    display: grid;
+    grid-template-columns: 74px 22px 12px 26px 114px;
+    gap: 5px;
+}
+
+.conf__options__legend {
+    grid-column: span 5;
+    color: #848484;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.conf__options__price {
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+.conf__options__price__empty {
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    color: #757575;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    grid-column: span 2;
+    box-sizing: border-box;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+.conf__options__for {
+    color: #848484;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 9px;
+}
+
+.conf__options__place {
+    color: #848484;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 9px;
+}
+
+.opt_place {
+    margin-top: 8px;
+
+}
+
+.adm__sessions {
+    background: #EAE9EBF2;
+
+    padding-top: 55px;
+    padding-left: 103px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 37px;
+    box-sizing: border-box;
+    padding-right: 60px;
+}
+
+.add_movie {
+    width: 194px;
+    height: 40px;
+    background: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.adm__movie {
+    width: 791px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 15px;
+    box-sizing: border-box;
+    margin-bottom: 47px;
+}
+
+.movie__frame {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #0000004D;
+    position: relative;
+}
+
+.movie__frame::before {
+    content: url("../img/Button.svg");
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px 0px 0px 0px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.adm__movie__header {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.adm__movie__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.adm__movie__time {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.conf-step__seance__hall {
+    width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 33px;
+}
+
+.seance__hall {
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+
+}
+
+.conf-step__seances-timeline {
+    width: 720px;
+    height: 60px;
+    border: 1px solid #848484;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.conf-step__seances-movies {
+    display: flex;
+    flex-direction: row;
+    padding-left: 288px;
+}
+
+.conf-step__seances-movie {
+    border: 1px solid #0000004D;
+    width: 70px;
+    height: 40px;
+    font-size: 10px;
+    font-weight: 400;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: black;
+    position: relative;
+}
+
+.conf-step__seances-movie::after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    background: #848484;
+    top: 51px;
+    align-self: flex-start;
+}
+
+.conf-step__seances-movies_hall2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+
+.conf-step__seances-movie {
+    display: flex;
+    flex-direction: column;
+}
+
+.conf-step__seances-movie-start {
+    font-size: 12px;
+    font-weight: 400;
+    color: #848484;
+    padding-top: 35px;
+    align-self: flex-start;
+}
+
+.adm__prices__sales {
+    background: #EAE9EBF2;
+    padding-top: 35px;
+    padding-left: 103px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 33px;
+}
+
+.conf-step__paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+    padding-top: 23px;
+    display: block;
+}
+
+.sales__halls {
+    padding-top: 20px;
+}
+
+
+.open__sales {
+    width: 270px;
+    height: 40px;
+    background: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin: 30px auto 0px auto;
+}
+
+
 
 @media (min-width: 991px) {
     .tap {
@@ -639,13 +1251,15 @@ body {
     .header_adm {
         width: 100vw;
         width: 100%;
+        box-sizing: border-box;
         padding-left: 20px;
     }
 
     .page-login {
         width: 100vw;
-        width: 100%; 
+        width: 100%;
     }
+
     .menu {
         width: 100vw;
         width: 100%;
@@ -660,7 +1274,71 @@ body {
     .movie-about {
         flex-wrap: wrap;
     }
+
+    .adm_wrapper {
+        width: 100vw;
+    }
+
+    .adm_wrapper__header {
+        width: 100vw;
+        width: 100%;
+    }
+
+    .conf__step__hall {
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .adm__halls-configuration {
+        padding-right: 33px;
+    }
+
+    .fieldset {
+        width: 100vw;
+        width: 100%;
+    }
+
+    .adm__sessions {
+        width: 100vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .adm__movie {
+        width: 100vw;
+        width: 100%;
+        box-sizing: border-box;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        padding-right: 33px;
+    }
+
+    .conf-step__seances {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .conf-step__seance__hall {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .conf-step__seances-timeline {
+        width: 100%;
+    }
+
+
+    .adm_wrapper::after {
+        height: 2550px;
+    }
+
+    .conf-step__seances-movies{
+        padding-left: 150px;
+    }
 }
+
+
 
 .movie-hall__header {
     display: flex;
@@ -709,6 +1387,7 @@ body {
         width: 100%;
         padding-left: 20px;
     }
+
     .menu {
         width: 100vw;
         width: 100%;
@@ -723,4 +1402,81 @@ body {
     .movie-about {
         flex-wrap: wrap;
     }
+
+    .adm_wrapper {
+        width: 100vw;
+    }
+
+    .adm_wrapper__header {
+        width: 100vw;
+        width: 100%;
+    }
+
+    .conf__step__hall {
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .adm__halls-configuration {
+        padding-right: 33px;
+    }
+
+    .fieldset {
+        width: 100vw;
+        width: 100%;
+    }
+
+    .adm__sessions {
+        width: 100vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .adm__movie {
+        width: 100vw;
+        width: 100%;
+        box-sizing: border-box;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        padding-right: 33px;
+    }
+
+    .conf-step__seances {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .conf-step__seance__hall {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .conf-step__seances-timeline {
+        width: 100%;
+    }
+
+    .conf__types {
+        display: grid;
+        grid-template-columns: 26px 150px 26px 114px;
+        gap: 10px;
+    }
+
+    .grid_1 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .grid_2 {
+        grid-row: 2;
+  grid-column: 2 / span 4;
+    }
+
+    .conf-step__seances-movies{
+        padding-left: 100px;
+    }
+
+    .adm_wrapper::after {
+        height: 2750px;
+    }
+
 }
