@@ -1,1 +1,319 @@
-Привет! Сюда я еще не добралась
+<!DOCTYPE html>
+<html class="page-login" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+    <div class="home">
+        <header class="header_adm">
+            <h1 onclick="document.location='index.html'" style="cursor: pointer;" class="heading">
+                <div>идём</div>
+                <div class="thin">в</div>
+                <div>кино</div>
+            </h1>
+            <div class="heading-1">Администраторррская</div>
+        </header>
+        <main>
+            <div class="adm_wrapper">
+                <section class="adm_halls">
+                    <div class="adm_wrapper__header">Управление залами</div>
+                    <div class="adm_wrapper__halls__info">
+                        <span class="adm__info">Доступные залы:</span>
+                        <ul class="adm_wrapper__halls__available">
+                            <li class="adm_wrapper__halls">
+                                – зал 1
+                            </li>
+                            <li class="adm_wrapper__halls">
+                                – зал 2
+                            </li>
+                        </ul>
+                        <button class="create__hall" type="button">Создать зал</button>
+                    </div>
+                </section>
+                <section class="adm_wrapper__halls-configuration">
+                    <div class="adm_wrapper__header">конфигурация залов</div>
+                    <div class="adm__halls-configuration">
+                        <div class="adm__halls-configuration__config">
+                            <span class="adm__info">Выберите зал для конфигурации:</span>
+                            <ul class="conf__halls">
+                                <li class="conf__hall__selected">зал 1</li>
+                                <li class="conf__hall">зал 2</li>
+                            </ul>
+                        </div>
+                        <div class="adm__halls-configuration__places">
+                            <span class="adm__info">Укажите количество рядов и максимальное количество кресел в
+                                ряду:</span>
+                            <ul class="conf__plases">
+                                <li class="conf__legend">Рядов, шт</li>
+                                <li class="conf__place__x"> </li>
+                                <li class="conf__legend">Мест, шт</li>
+                                <li class="conf__place">10</li>
+                                <li class="conf__place__x">x</li>
+                                <li class="conf__place">8</li>
+                            </ul>
+                        </div>
+                        <div class="adm__halls-configuration__types">
+                            <span class="adm__info">Теперь вы можете указать типы кресел на схеме зала:</span>
+                            <ul class="conf__types">
+                                <li class="conf__type__regular"> </li>
+                                <li class="conf__type__legend">— обычные кресла </li>
+                                <li class="conf__type__vip"> </li>
+                                <li class="conf__type__legend">— VIP кресла </li>
+                                <li class="conf__type__blocked grid_1"> </li>
+                                <li class="conf__type__legend  grid_2">— заблокированные (нет кресла) </li>
+                            </ul>
+                            <span class="conf__types__hint">
+                                Чтобы изменить вид кресла, нажмите по нему левой кнопкой мыши
+                            </span>
+                            <div class="conf__step__hall">
+                                <span class="conf__step__screen">ЭКРАН</span>
+                                <div class="conf__step__hall-wrp">
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__vip"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                    <div class="conf__step__hall_column">
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__blocked"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                        <div class="conf__step__hall_chair conf__type__regular"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="fieldset">
+                            <button class="cancel_button" type="button">отмена</button>
+                            <button class="save__button" type="button">сохранить</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="adm_wrapper__price-configuration">
+                    <div class="adm_wrapper__header">конфигурация цен</div>
+                    <div class="adm__prices">
+                        <div class="adm__prices__halls">
+                            <span class="adm__info">Выберите зал для конфигурации:</span>
+                            <ul class="conf__halls">
+                                <li class="conf__hall">зал 1</li>
+                                <li class="conf__hall__selected">зал 2</li>
+                            </ul>
+                        </div>
+                        <span class="adm__info">Установите цены для типов кресел:</span>
+                        <div class="adm__prices_options">
+                            <ul class="conf__options">
+                                <li class="conf__options__legend"> Цена, рублей</li>
+                                <li class="conf__options__price__empty">0</li>
+                                <li class="conf__options__for">за</li>
+                                <li class="conf__type__regular opt_place"></li>
+                                <li class="conf__options__place">обычные кресла</li>
+                                <li class="conf__options__legend"> Цена, рублей</li>
+                                <li class="conf__options__price">350</li>
+                                <li class="conf__options__emp"></li>
+                                <li class="conf__options__for">за</li>
+                                <li class="conf__type__vip opt_place"></li>
+                                <li class="conf__options__place">VIP кресла</li>
+                            </ul>
+                        </div>
+                        <div class="fieldset">
+                            <button class="cancel_button" type="button">отмена</button>
+                            <button class="save__button" type="button">сохранить</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="adm_wrapper__session_grid">
+                    <div class="adm_wrapper__header">сетка сеансов</div>
+                    <div class="adm__sessions">
+                        <button class="add_movie" type="button">добавить фильм</button>
+                        <div class="adm__movie">
+                            <div class="movie__frame" style="background: #CAFF85;">
+                                <div class="movie__frame__poster"><img src="img\poster.png"
+                                        style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
+                                <div class="adm__movie__information">
+                                    <h3 class="adm__movie__header">
+                                        Звёздные войны XXIII: Атака клонированных клонов</h3>
+                                    <p class="adm__movie__time">130 минут</p>
+                                </div>
+                            </div>
+                            <div class="movie__frame" style="background: #85FF89;">
+                                <div class="movie__frame__poster"><img src="img\poster.png"
+                                        style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
+                                <div class="adm__movie__information">
+                                    <h3 class="adm__movie__header">
+                                        Миссия выполнима</h3>
+                                    <p class="adm__movie__time">120 минут</p>
+                                </div>
+                            </div>
+                            <div class="movie__frame" style="background:#85FFD3;">
+                                <div class="movie__frame__poster"><img src="img\poster.png"
+                                        style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
+                                <div class="adm__movie__information">
+                                    <h3 class="adm__movie__header">
+                                        Серая пантера</h3>
+                                    <p class="adm__movie__time">90 минут</p>
+                                </div>
+                            </div>
+                            <div class="movie__frame" style="background:#85E2FF;">
+                                <div class="movie__frame__poster"><img src="img\poster.png"
+                                        style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
+                                <div class="adm__movie__information">
+                                    <h3 class="adm__movie__header">
+                                        Движение вбок</h3>
+                                    <p class="adm__movie__time">95 минут</p>
+                                </div>
+                            </div>
+                            <div class="movie__frame" style="background:#8599FF;">
+                                <div class="movie__frame__poster"><img src="img\poster.png"
+                                        style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
+                                <div class="adm__movie__information">
+                                    <h3 class="adm__movie__header">
+                                        Кот Да Винчи</h3>
+                                    <p class="adm__movie__time">100 минут</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conf-step__seances">
+                            <div class="conf-step__seance__hall">
+                                <h4 class="seance__hall">ЗАЛ 1</h4>
+                                <div class="conf-step__seances-timeline">
+                                    <div class="conf-step__seances-movie" style="background:#85FF89;">Миссия выполнима
+                                        <span class="conf-step__seances-movie-start">00:00</span>
+                                    </div>
+                                    <div class="conf-step__seances-movies">
+                                        <div class="conf-step__seances-movie" style="background:#85FF89;">Миссия
+                                            выполним <span class="conf-step__seances-movie-start">12:00</span></div>
+                                        <div class="conf-step__seances-movie" style="background:#CAFF85;">Звёздные войны
+                                            <span class="conf-step__seances-movie-start">14:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="conf-step__seance__hall">
+                                <h4 class="seance__hall">ЗАЛ 2</h4>
+                                <div class="conf-step__seances-timeline">
+                                    <div class="conf-step__seances-movies_hall2">
+                                        <div class="conf-step__seances-movie" style="background:#85FF89;">Миссия
+                                            выполним <span class="conf-step__seances-movie-start">19:50</span></div>
+                                        <div class="conf-step__seances-movie" style="background:#CAFF85;">Звёздные войны
+                                            <span class="conf-step__seances-movie-start">22:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fieldset">
+                            <button class="cancel_button" type="button">отмена</button>
+                            <button class="save__button" type="button">сохранить</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="adm_wrapper__sales">
+                    <div class="adm_wrapper__header">открыть продажи</div>
+                    <div class="adm__prices__sales">
+                        <div class="adm__prices__halls">
+                            <span class="adm__info">Выбирите залл для открытия/закрытия продаж:</span>
+                            <ul class="conf__halls sales__halls">
+                                <li class="conf__hall">зал 1</li>
+                                <li class="conf__hall__selected">зал 2</li>
+                            </ul>
+<span class="conf-step__paragraph"> Всё готово к открытию</span>
+<button class="open__sales" type="button">Открыть продажу билетов</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
