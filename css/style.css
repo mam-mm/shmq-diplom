@@ -237,7 +237,7 @@ body {
 .time-list {
     display: flex;
     gap: 5px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
 .time-list-item {
@@ -430,6 +430,8 @@ body {
     text-align: left;
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .ticket__section::before {
@@ -459,9 +461,7 @@ body {
 }
 
 .ticket__info {
-    display: block;
     padding-bottom: 10px;
-
 }
 
 .payment_button {
@@ -503,7 +503,8 @@ body {
 }
 
 /* login-page */
-.page-login {
+.page-login,
+.page-adm {
     background-image: url("../img/login_bg.png") !important;
     background-size: cover;
     background-position: center center;
@@ -512,7 +513,8 @@ body {
     position: relative;
 }
 
-.page-login::after {
+.page-login::after,
+.page-adm::after{
     content: "";
     position: absolute;
     top: 0;
@@ -524,7 +526,8 @@ body {
     background-color: #000000;
 }
 
-.header_adm {
+.header_adm,
+.header_adm__adm {
     width: 100%;
     width: 990px;
     box-sizing: border-box;
@@ -547,7 +550,7 @@ body {
 }
 
 .authorization_form {
-    width: 480px;
+    max-width: 480px;
     background: #EAE9EBF2;
     margin: 0 auto;
     padding-bottom: 29px;
@@ -624,6 +627,7 @@ body {
 
 .adm_wrapper {
     width: 962px;
+    box-sizing: border-box;
     margin: 0 auto;
     background: #EAE9EBF2;
 }
@@ -1037,7 +1041,6 @@ body {
 
 .adm__sessions {
     background: #EAE9EBF2;
-
     padding-top: 55px;
     padding-left: 103px;
     display: flex;
@@ -1111,10 +1114,11 @@ body {
 }
 
 .conf-step__seance__hall {
-    width: 720px;
+    max-width: 720px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     padding-bottom: 33px;
 }
 
@@ -1133,12 +1137,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .conf-step__seances-movies {
     display: flex;
     flex-direction: row;
-    padding-left: 288px;
+    margin-left: 40.5%;
 }
 
 .conf-step__seances-movie {
@@ -1174,14 +1179,17 @@ body {
 .conf-step__seances-movie {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .conf-step__seances-movie-start {
     font-size: 12px;
     font-weight: 400;
     color: #848484;
-    padding-top: 35px;
-    align-self: flex-start;
+    position: absolute;
+    top: 59px;
+    left: -15px;
 }
 
 .adm__prices__sales {
@@ -1225,7 +1233,201 @@ body {
     margin: 30px auto 0px auto;
 }
 
+.bold__info {
+    font-weight: 700;
+}
 
+
+/* popup */
+
+.popup__addfilm {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 7, 7, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup__addseanse {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 7, 7, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup__addhall {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 7, 7, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup__body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content {
+    width: 960px;
+}
+
+.popup__header {
+    background: #63536C;
+    height: 57px;
+    line-height: 57px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 42px;
+    position: relative;
+}
+
+.popup__header::after {
+    content: " ";
+    background-image: url("../img/close.png");
+    background-size: cover;
+    position: absolute;
+    box-sizing: border-box;
+    width: 22px;
+    height: 22px;
+    top: 17.5px;
+    right: 42px;
+}
+
+.popup__content {
+    background: #EAE9EBF2;
+}
+
+.popup__form {
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-input,
+.hall-input {
+    border: 1px solid #B7B7B7;
+    color: #757575;
+    background-color: #fff;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 7px;
+    margin-bottom: 9px;
+}
+
+.film-duration,
+.film-country {
+    border: 1px solid #B7B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 7px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 9px;
+}
+
+.film-discription {
+    border: 1px solid #B7B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 7px;
+    height: 80px;
+    line-height: 35px;
+    margin-bottom: 9px;
+}
+
+.hall-seanse,
+.film-seanse,
+.time-seanse {
+    border: 1px solid #B7B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    padding-left: 7px;
+    padding-right: 9px;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 9px;
+    box-sizing: border-box;
+}
+
+.popup__addfilm__buttons {
+    margin-top: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.addfilm_button,
+.addpost_button {
+    height: 40px;
+    background: #16A6AF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.addfilm_button {
+    width: 194px;
+}
+
+.addpost_button {
+    width: 200px;
+}
+
+.cancelfilm_button {
+    width: 139px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px 0px #0000001F;
+    box-shadow: 0px 3px 3px 0px #0000003D;
+    text-align: center;
+    color: #63536C;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
 @media (min-width: 991px) {
     .tap {
@@ -1252,7 +1454,14 @@ body {
         width: 100vw;
         width: 100%;
         box-sizing: border-box;
-        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding: 14px;
+    }
+
+    .header_adm__adm {
+        padding-left: 103px;
+        width: 100vw;
     }
 
     .page-login {
@@ -1305,37 +1514,89 @@ body {
         box-sizing: border-box;
     }
 
+    .conf__types {
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
     .adm__movie {
         width: 100vw;
         width: 100%;
         box-sizing: border-box;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        padding-right: 33px;
+        margin-bottom: 17px;
+        padding-right: 66px;
     }
 
     .conf-step__seances {
         width: 100%;
         box-sizing: border-box;
+        margin-left: 10px;
     }
 
     .conf-step__seance__hall {
         width: 100%;
         box-sizing: border-box;
+        max-width: 552px;
     }
 
     .conf-step__seances-timeline {
         width: 100%;
     }
 
-
     .adm_wrapper::after {
-        height: 2550px;
+        height: 2520px;
     }
 
-    .conf-step__seances-movies{
-        padding-left: 150px;
+    .conf-step__seances-movies {
+        margin-left: 30%;
     }
+
+    .fieldset {
+        padding-top: 23px;
+        padding-left: 10px;
+    }
+
+    .fieldset__screen {
+        padding-top: 25px;
+        padding-left: 0px;
+    }
+
+    .fieldset__konf {
+        padding-top: 31px;
+        padding-left: 0px
+    }
+
+    .movie__frame {
+        max-width: 260px;
+        box-sizing: border-box;
+    }
+
+    .adm__movie__header {
+        overflow: hidden;
+    }
+
+    .menu__list-item.active {
+        box-sizing: border-box;
+        width: 187px;
+    }
+
+    .popup__addfilm,
+    .popup__addseanse,
+    .popup__addhall {
+        width: 100vw;
+        max-width: 960px;
+    }
+
+    .popup__form {
+        min-width: 641px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
 }
 
 
@@ -1349,7 +1610,7 @@ body {
 
 .tap_block {
     display: block;
-    padding-right: 25px;
+    padding-right: 33px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1358,7 +1619,7 @@ body {
 .tap_hand {
     width: 24px;
     height: 32px;
-    padding-top: 20px;
+    padding-top: 7px;
 }
 
 .tap {
@@ -1370,6 +1631,8 @@ body {
     letter-spacing: 0em;
     text-align: center;
 }
+
+/*mobile*/
 
 @media (max-width: 640px) {
 
@@ -1385,8 +1648,18 @@ body {
     .header_adm {
         width: 100vw;
         width: 100%;
-        padding-left: 20px;
+        box-sizing: border-box;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding: 14px;
     }
+
+    .header_adm__adm {
+        width: 212px;
+        padding: 36px 0px 34px 15px;
+        margin: 0 auto;
+    }
+
 
     .menu {
         width: 100vw;
@@ -1408,8 +1681,8 @@ body {
     }
 
     .adm_wrapper__header {
-        width: 100vw;
-        width: 100%;
+        padding-left: 67px;
+        text-align: left;
     }
 
     .conf__step__hall {
@@ -1431,6 +1704,8 @@ body {
         width: 100vw;
         width: 100%;
         box-sizing: border-box;
+        padding-top: 58px;
+        padding-left: 32px;
     }
 
     .adm__movie {
@@ -1441,6 +1716,7 @@ body {
         grid-template-rows: 1fr;
         padding-right: 33px;
     }
+
 
     .conf-step__seances {
         width: 100%;
@@ -1458,25 +1734,148 @@ body {
 
     .conf__types {
         display: grid;
-        grid-template-columns: 26px 150px 26px 114px;
+        grid-template-columns: 26px 130px 26px 114px;
         gap: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .grid_1 {
         grid-row: 2;
         grid-column: 1;
     }
+
     .grid_2 {
         grid-row: 2;
-  grid-column: 2 / span 4;
+        grid-column: 2 / span 4;
     }
 
-    .conf-step__seances-movies{
-        padding-left: 100px;
+    .conf-step__seances-movies {
+        margin-left: 2%;
     }
 
     .adm_wrapper::after {
-        height: 2750px;
+        height: 0px;
     }
 
+    .adm_wrapper__header::before {
+        width: 22px;
+        height: 22px;
+        border-radius: 22px;
+        top: 21.5px;
+        left: 20px;
+    }
+
+    .adm_wrapper__header {
+        height: 65px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-top: 21.5px;
+    }
+
+    .adm_wrapper__header::after {
+        top: 26.5px;
+        right: 8%;
+    }
+
+    .adm_wrapper__halls__info {
+        padding-left: 30px;
+    }
+
+    .create__hall {
+        margin: 0 auto 30px 23%;
+        display: block;
+    }
+
+    .adm__halls-configuration {
+        padding-left: 30px;
+    }
+
+    .conf__types__hint {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .adm__prices {
+        padding-left: 30px;
+    }
+
+    .add_movie {
+        margin-bottom: 34px;
+    }
+
+    .adm__movie {
+        margin-bottom: 34px;
+    }
+
+    .adm__sessions {
+        padding-right: 30px;
+    }
+
+    .movie__frame {
+        width: 260px;
+    }
+
+
+    .adm__prices__sales {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .fieldset__mobile {
+        padding-top: 0px;
+        padding-bottom: 36px;
+    }
+
+    .menu__list-item.active {
+        box-sizing: border-box;
+        min-width: 75px;
+    }
+
+    .time-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu__list-item {
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .popup__addfilm,
+    .popup__addseanse,
+    .popup__addhall {
+        width: 100vw;
+        max-width: 640px;
+    }
+
+    .popup__form {
+        max-width: 640px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 14px;
+        box-sizing: border-box;
+    }
+
+    .popup__addfilm__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popup__addfilm__buttons {
+        margin-top: 14px;
+    }
+
+    .addfilm_button,
+    .addpost_button,
+    .cancelfilm_button {
+        width: 200px;
+    }
+}
+
+.time-list__bottom {
+    padding-bottom: 0px;
 }

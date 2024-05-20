@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page-login" lang="ru">
+<html class="page-adm" lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
 <body>
     <div class="home">
-        <header class="header_adm">
+        <header class="header_adm__adm">
             <h1 onclick="document.location='index.html'" style="cursor: pointer;" class="heading">
                 <div>идём</div>
                 <div class="thin">в</div>
@@ -21,7 +21,7 @@
         <main>
             <div class="adm_wrapper">
                 <section class="adm_halls">
-                    <div class="adm_wrapper__header">Управление залами</div>
+                    <h2 class="adm_wrapper__header">Управление залами</h2>
                     <div class="adm_wrapper__halls__info">
                         <span class="adm__info">Доступные залы:</span>
                         <ul class="adm_wrapper__halls__available">
@@ -36,7 +36,7 @@
                     </div>
                 </section>
                 <section class="adm_wrapper__halls-configuration">
-                    <div class="adm_wrapper__header">конфигурация залов</div>
+                    <h2 class="adm_wrapper__header">конфигурация залов</h2>
                     <div class="adm__halls-configuration">
                         <div class="adm__halls-configuration__config">
                             <span class="adm__info">Выберите зал для конфигурации:</span>
@@ -173,14 +173,14 @@
                             </div>
 
                         </div>
-                        <div class="fieldset">
+                        <div class="fieldset fieldset__screen">
                             <button class="cancel_button" type="button">отмена</button>
                             <button class="save__button" type="button">сохранить</button>
                         </div>
                     </div>
                 </section>
                 <section class="adm_wrapper__price-configuration">
-                    <div class="adm_wrapper__header">конфигурация цен</div>
+                    <h2 class="adm_wrapper__header">конфигурация цен</h2>
                     <div class="adm__prices">
                         <div class="adm__prices__halls">
                             <span class="adm__info">Выберите зал для конфигурации:</span>
@@ -205,18 +205,18 @@
                                 <li class="conf__options__place">VIP кресла</li>
                             </ul>
                         </div>
-                        <div class="fieldset">
+                        <div class="fieldset fieldset__konf">
                             <button class="cancel_button" type="button">отмена</button>
                             <button class="save__button" type="button">сохранить</button>
                         </div>
                     </div>
                 </section>
                 <section class="adm_wrapper__session_grid">
-                    <div class="adm_wrapper__header">сетка сеансов</div>
+                    <h2 class="adm_wrapper__header">сетка сеансов</h2>
                     <div class="adm__sessions">
                         <button class="add_movie" type="button">добавить фильм</button>
                         <div class="adm__movie">
-                            <div class="movie__frame" style="background: #CAFF85;">
+                            <article class="movie__frame" style="background: #CAFF85;">
                                 <div class="movie__frame__poster"><img src="img\poster.png"
                                         style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
                                 <div class="adm__movie__information">
@@ -224,8 +224,8 @@
                                         Звёздные войны XXIII: Атака клонированных клонов</h3>
                                     <p class="adm__movie__time">130 минут</p>
                                 </div>
-                            </div>
-                            <div class="movie__frame" style="background: #85FF89;">
+                            </article>
+                            <article class="movie__frame" style="background: #85FF89;">
                                 <div class="movie__frame__poster"><img src="img\poster.png"
                                         style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
                                 <div class="adm__movie__information">
@@ -233,8 +233,8 @@
                                         Миссия выполнима</h3>
                                     <p class="adm__movie__time">120 минут</p>
                                 </div>
-                            </div>
-                            <div class="movie__frame" style="background:#85FFD3;">
+                            </article>
+                            <article class="movie__frame" style="background:#85FFD3;">
                                 <div class="movie__frame__poster"><img src="img\poster.png"
                                         style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
                                 <div class="adm__movie__information">
@@ -242,8 +242,8 @@
                                         Серая пантера</h3>
                                     <p class="adm__movie__time">90 минут</p>
                                 </div>
-                            </div>
-                            <div class="movie__frame" style="background:#85E2FF;">
+                            </article>
+                            <article class="movie__frame" style="background:#85E2FF;">
                                 <div class="movie__frame__poster"><img src="img\poster.png"
                                         style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
                                 <div class="adm__movie__information">
@@ -251,8 +251,8 @@
                                         Движение вбок</h3>
                                     <p class="adm__movie__time">95 минут</p>
                                 </div>
-                            </div>
-                            <div class="movie__frame" style="background:#8599FF;">
+                            </article>
+                            <article class="movie__frame" style="background:#8599FF;">
                                 <div class="movie__frame__poster"><img src="img\poster.png"
                                         style="width:38px;height:100%" alt="Постер фильма Звёздные войны XXIII"></div>
                                 <div class="adm__movie__information">
@@ -260,7 +260,7 @@
                                         Кот Да Винчи</h3>
                                     <p class="adm__movie__time">100 минут</p>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                         <div class="conf-step__seances">
                             <div class="conf-step__seance__hall">
@@ -291,28 +291,89 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="fieldset">
+                        <div class="fieldset fieldset__mobile">
                             <button class="cancel_button" type="button">отмена</button>
                             <button class="save__button" type="button">сохранить</button>
                         </div>
                     </div>
                 </section>
                 <section class="adm_wrapper__sales">
-                    <div class="adm_wrapper__header">открыть продажи</div>
+                    <h2 class="adm_wrapper__header">открыть продажи</h2>
                     <div class="adm__prices__sales">
                         <div class="adm__prices__halls">
-                            <span class="adm__info">Выбирите залл для открытия/закрытия продаж:</span>
+                            <span class="adm__info">Выбирите зал для открытия/закрытия продаж:</span>
                             <ul class="conf__halls sales__halls">
                                 <li class="conf__hall">зал 1</li>
                                 <li class="conf__hall__selected">зал 2</li>
                             </ul>
-<span class="conf-step__paragraph"> Всё готово к открытию</span>
-<button class="open__sales" type="button">Открыть продажу билетов</button>
+                            <span class="conf-step__paragraph"> Всё готово к открытию</span>
+                            <button class="open__sales" type="button">Открыть продажу билетов</button>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
+    </div>
+
+    <div id="popup" class="popup__addfilm">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">добавление фильма</div>
+                <form class="popup__form">
+                    <label for="film__input" class="lable"> Название фильма</label>
+                    <input id="film__input" class="film-input" placeholder="Например, «Гражданин Кейн»" type="text">
+                    <label for="film__duration" class="lable"> Продолжительность фильма (мин.)</label>
+                    <input id="film__duration" class="film-duration" type="text">
+                    <label for="film__discription" class="lable"> Описание фильма</label>
+                    <input id="film__discription" class="film-discription" type="text">
+                    <label for="film__country" class="lable"> Страна</label>
+                    <input id="film__country" class="film-country" type="text">
+                    <div class="popup__addfilm__buttons">
+                        <button class="addfilm_button" type="button">добавить фильм</button>
+                        <button class="addpost_button" type="button">загрузить постер</button>
+                        <button class="cancelfilm_button" type="button">отменить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup__addseanse">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">добавление сеанса</div>
+                <form class="popup__form">
+                    <label for="hall__seanse" class="lable"> Название зала</label>
+                    <select id="hall__seanse" class="hall-seanse" type="text"> 
+                        <option value="">Название зала</option>
+                    </select>
+                    <label for="film__seanse" class="lable"> Название фильма</label>
+                    <select id="film__seanse" class="film-seanse" type="text"> 
+                        <option value="">Название фильма</option>
+                    </select>
+                    <label for="time__seanse" class="lable"> Время начала</label>
+                    <input id="time__seanse" class="time-seanse" value="00:00" type="time">
+                    <div class="popup__addfilm__buttons">
+                        <button class="addfilm_button" type="button">добавить фильм</button>
+                        <button class="cancelfilm_button" type="button">отменить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup__addhall">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">добавление зала</div>
+                <form class="popup__form">
+                    <label for="hall__input" class="lable"> Название зала</label>
+                    <input id="hall__input" class="hall-input" placeholder="Например, «Зал 1»" type="text">
+                    <div class="popup__addfilm__buttons">
+                        <button class="addfilm_button" type="button">добавить фильм</button>
+                        <button class="cancelfilm_button" type="button">отменить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
