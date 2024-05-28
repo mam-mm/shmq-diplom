@@ -1515,7 +1515,7 @@ max-width: 70px;
     }
 
     .conf__types {
-        grid-template-columns: 26px 25% 26px 18% 26px 45%;
+        grid-template-columns: 26px 26% 26px 18% 26px 45%;
         box-sizing: border-box;
         overflow: hidden;
     }
