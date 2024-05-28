@@ -1148,7 +1148,7 @@ body {
 
 .conf-step__seances-movie {
     border: 1px solid #0000004D;
-    width: 70px;
+max-width: 70px;
     height: 40px;
     font-size: 10px;
     font-weight: 400;
@@ -1515,6 +1515,7 @@ body {
     }
 
     .conf__types {
+        grid-template-columns: 26px 25% 26px 18% 26px 45%;
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -1551,6 +1552,12 @@ body {
 
     .conf-step__seances-movies {
         margin-left: 30%;
+    }
+
+    .conf__type__legend  .grid_2{
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .fieldset {
@@ -1792,10 +1799,14 @@ body {
     }
 
     .conf__types__hint {
-        display: -webkit-box;
+        display: block;
+        max-width: 308px;
+        white-space: nowrap;
+        overflow: hidden;
+        /* display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        overflow: hidden;
+        overflow: hidden; */
     }
 
     .adm__prices {
